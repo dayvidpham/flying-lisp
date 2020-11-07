@@ -4,7 +4,7 @@ import 'package:flame/util.dart';
 
 import 'lisp-game.dart';
 
-void main() async {
+void main() {
   var game = new LispGame();
   runApp(game.widget);
 
