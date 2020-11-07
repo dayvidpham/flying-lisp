@@ -5,13 +5,14 @@ import 'package:flame/util.dart';
 import 'lisp-game.dart';
 
 void main() async {
-  await setupFlame();
   var game = new LispGame();
   runApp(game.widget);
+
+  setupFlame();
 }
 
-void setupFlame() async {
+void setupFlame() {
   Util flameUtil = Util();
-  await flameUtil.fullScreen();
-  await flameUtil.setLandscape();
+  flameUtil.fullScreen();
+  flameUtil.setLandscape();
 }
