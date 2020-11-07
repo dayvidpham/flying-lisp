@@ -1,4 +1,0 @@
-#Sat Nov 07 11:54:48 PST 2020
-base.0=/home/smcgirr/Repos/personal/flying-lisp/LISP/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
