@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
+import 'package:flame/util.dart';
 
-import 'homepage.dart';
+import 'lisp-game.dart';
 
-void main() {
-  runApp(MyApp());
+void main() async {
+  await setupFlame();
+  var game = new LispGame();
+  runApp(game.widget);
 }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
-    );
-  }
+void setupFlame() async {
+  Util flameUtil = Util();
+  await flameUtil.fullScreen();
+  await flameUtil.setLandscape();
 }
