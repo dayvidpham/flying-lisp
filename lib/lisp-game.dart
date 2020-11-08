@@ -2,11 +2,12 @@ import 'dart:ui';
 import 'package:flame/game.dart';
 import 'package:flame/sprite.dart';
 import 'package:flame/flame.dart';
-import 'package:lisp/background.dart';
+import 'background.dart';
 
 class LispGame extends Game {
   Size screenSize;
   Background background;
+  final int scale = 10;
 
   LispGame() {
     initialize();

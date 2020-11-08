@@ -13,6 +13,7 @@ class Background {
   }
 
   void render(Canvas canvas) {
+    bgRect = Rect.fromLTWH(0, 0, game.screenSize.width, game.screenSize.height);
     bgSprite.renderRect(canvas, bgRect);
   }
 
