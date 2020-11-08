@@ -3,11 +3,12 @@ import 'package:box2d_flame/box2d.dart';
 import 'package:flame/game.dart';
 import 'package:flame/sprite.dart';
 import 'package:flame/flame.dart';
-import 'package:lisp/background.dart';
+import 'background.dart';
 
 class LispGame extends Game {
   Size screenSize;
   Background background;
+  final double scale = 10;
 
   static const int WORLD_POOL_SIZE = 100;
   static const int WORLD_POOL_CONTAINER_SIZE = 10;
@@ -29,6 +30,10 @@ class LispGame extends Game {
 
   void render(Canvas canvas) {
     background.render(canvas);
+    // Save the canvas and resize/scale it based on screenSize
+    canvas.save();
+    canvas.scale(screenSize.width / scale);
+    canvas.restore();
   }
 
   void update(double t) {
