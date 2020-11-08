@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flame/util.dart';
 import 'package:flame/flame.dart';
+import 'package:lisp/lisp-box2d.dart';
 import 'lisp-game.dart';
 
 void main() {
-  var game = new LispGame();
+  var lispBox = new LispBox2D();
+  var game = new LispGame(lispBox);
   runApp(game.widget);
 
   setupFlame();
