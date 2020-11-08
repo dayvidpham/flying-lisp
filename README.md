@@ -1,7 +1,9 @@
 # LISP: Life Is Short and Painful
 
 ## The Interdimensional Fly Game
-A new Flutter project.
+A new Flutter project. 
+
+A game where an interdimensional fly is required to avoid the asteroids and survive in space!
 
 ## Getting Started
 
