@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'lisp-game.dart';
 import 'package:box2d_flame/box2d.dart';
-import 'package:flame/keyboard.dart';
+import 'package:flame/sprite.dart';
 
 class Fly {
   final LispGame game;
