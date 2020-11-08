@@ -1,25 +1,15 @@
 import 'dart:ui';
-import 'package:box2d_flame/box2d.dart';
-import 'package:flame/game.dart';
-import 'package:flame/sprite.dart';
+import 'package:flame/box2d/box2d_component.dart';
+import 'package:flame/box2d/box2d_game.dart';
 import 'package:flame/flame.dart';
 import 'background.dart';
 
-class LispGame extends Game {
+class LispGame extends Box2DGame {
   Size screenSize;
   Background background;
-  final double scale = 10;
+  Box2DComponent box;
 
-  static const int WORLD_POOL_SIZE = 100;
-  static const int WORLD_POOL_CONTAINER_SIZE = 10;
-
-  World world;
-
-  final Vector2 _gravity = Vector2.zero();
-
-  LispGame() {
-    world = new World.withPool(
-        _gravity, DefaultWorldPool(WORLD_POOL_SIZE, WORLD_POOL_CONTAINER_SIZE));
+  LispGame(Box2DComponent box) : super(box) {
     initialize();
   }
 
@@ -30,14 +20,12 @@ class LispGame extends Game {
 
   void render(Canvas canvas) {
     background.render(canvas);
-    // Save the canvas and resize/scale it based on screenSize
-    canvas.save();
-    canvas.scale(screenSize.width / scale);
-    canvas.restore();
+    super.render(canvas);
   }
 
   void update(double t) {
     // TODO: implement update
+    super.update(t);
   }
 
   void resize(Size size) {
