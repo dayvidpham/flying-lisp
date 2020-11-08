@@ -7,7 +7,7 @@ import 'background.dart';
 class LispGame extends Game {
   Size screenSize;
   Background background;
-  final int scale = 10;
+  final double scale = 10;
 
   LispGame() {
     initialize();
@@ -20,6 +20,10 @@ class LispGame extends Game {
 
   void render(Canvas canvas) {
     background.render(canvas);
+    // Save the canvas and resize/scale it based on screenSize
+    canvas.save();
+    canvas.scale(screenSize.width / scale);
+    canvas.restore();
   }
 
   void update(double t) {
