@@ -7,7 +7,7 @@ import 'background.dart';
 class LispGame extends Box2DGame {
   Size screenSize;
   Background background;
-  Box2DComponent physicsComponents;
+  Box2DComponent box;
 
   LispGame(Box2DComponent box) : super(box) {
     initialize();
