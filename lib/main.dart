@@ -5,9 +5,10 @@ import 'package:flame/flame.dart';
 import 'lisp-game.dart';
 
 void main() {
-  setupFlame();
   var game = new LispGame();
   runApp(game.widget);
+
+  setupFlame();
 }
 
 void setupFlame() {
